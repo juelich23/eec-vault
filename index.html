@@ -29,7 +29,6 @@
   --line-2:#BFB9AD;
   --accent:#1C5A4E;
   --accent-2:#2E7A6A;
-  --flag:#8E3B2F;
 
   /* case &mdash; a material, not a theme. identical in light and dark. */
   --case:#0B0D10;
@@ -55,7 +54,6 @@
     --line-2:#3B424A;
     --accent:#5FBFA8;
     --accent-2:#7FD3BE;
-    --flag:#DE8878;
     --case:#08090C;
     --case-2:#0E1114;
   }
@@ -71,7 +69,6 @@
   --line-2:#3B424A;
   --accent:#5FBFA8;
   --accent-2:#7FD3BE;
-  --flag:#DE8878;
   --case:#08090C;
   --case-2:#0E1114;
 }
@@ -383,17 +380,6 @@ section{padding:76px 0}
   display:block;font-family:var(--text);font-weight:400;font-size:13px;font-style:italic;
   letter-spacing:0;color:var(--case-ink-2);margin-top:7px;text-align:right;
 }
-.pending{
-  display:inline-block;font-family:var(--data);font-size:10px;font-weight:400;
-  letter-spacing:.13em;text-transform:uppercase;
-  color:var(--case-light);border:1px solid rgba(217,164,65,.42);
-  border-radius:2px;padding:7px 11px;line-height:1;
-}
-.record .caveat{
-  margin:30px 0 0;padding-left:16px;border-left:2px solid var(--case-light);
-  font-size:15.5px;line-height:1.6;color:var(--case-ink-2);max-width:66ch;
-}
-.record .caveat em{color:var(--case-ink);font-style:italic}
 
 /* ---- close ---- */
 .close .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:70px;align-items:start}
@@ -407,11 +393,6 @@ section{padding:76px 0}
 .desk a.line:hover .val{color:var(--accent)}
 .desk .key{font-family:var(--data);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3)}
 .desk .val{font-family:var(--display);font-weight:500;font-size:16px;letter-spacing:-.015em;text-align:right}
-.desk .val.blank{
-  font-family:var(--data);font-weight:400;font-size:10px;letter-spacing:.13em;text-transform:uppercase;
-  color:var(--flag);border:1px solid var(--flag);border-radius:2px;padding:6px 10px;line-height:1;
-  display:inline-block;
-}
 
 /* ---- colophon ---- */
 .colophon{background:var(--case);color:var(--case-ink-2);padding:30px 0 40px}
@@ -816,16 +797,15 @@ section{padding:76px 0}
           <p class="lab">The record</p>
           <h2>The business in figures</h2>
         </div>
-        <p>Verified figures are stated. Everything the business has not yet supplied is marked pending rather than estimated.</p>
+        <p>Figures as stated by the business, current as of August 2026.</p>
       </div>
       <div class="ledger">
         <div class="entry"><span class="k">Active selling channels</span><span class="v">6<span class="note">Four platforms, plus card shows and Instagram</span></span></div>
         <div class="entry"><span class="k">Authentication partners</span><span class="v">2<span class="note">PSA and Beckett</span></span></div>
         <div class="entry"><span class="k">Instagram following</span><span class="v">2,070<span class="note">@yishui523, August 2026</span></span></div>
-        <div class="entry"><span class="k">Years in operation</span><span class="v"><span class="pending">Pending</span></span></div>
-        <div class="entry"><span class="k">Shows attended per year</span><span class="v"><span class="pending">Pending</span></span></div>
+        <div class="entry"><span class="k">Years in operation</span><span class="v">10</span></div>
+        <div class="entry"><span class="k">Shows attended per year</span><span class="v">~20<span class="note">National and regional</span></span></div>
       </div>
-      <p class="caveat">Every line marked <em>pending</em> is a real blank, not a placeholder for effect. Fill them in from your own records before this goes to the bank &mdash; a lender will treat an unsupported number as the weakest claim on the page, and an honest blank costs you far less than a figure you cannot evidence.</p>
     </div>
   </section>
 </div>

@@ -3,6 +3,8 @@
 Static one-page site for EEC Vault (Eggeggchicken Vault), a sports card
 dealership based in Orange, California.
 
+Live at https://juelich23.github.io/eec-vault/
+
 ## Structure
 
     index.html      the whole site - no build step, no JavaScript
@@ -18,10 +20,8 @@ or serve the folder:
 
 Pushing to `main` publishes automatically via GitHub Pages.
 
-## Still to fill in
+## Still to do
 
-- `Years in operation` and `Shows attended per year` are marked *Pending*
-  in the Record section.
 - `REPLACE-WITH-YOUR-DOMAIN` appears in the canonical and og:image tags in
   `index.html`. Replace both once a custom domain is pointed here, otherwise
   link previews will not render.
