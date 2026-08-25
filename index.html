@@ -74,8 +74,10 @@
 }
 
 *{box-sizing:border-box}
+html{scroll-padding-top:88px}
 body{
   margin:0;
+  -webkit-text-size-adjust:100%;
   background:var(--paper);
   color:var(--ink);
   font-family:var(--text);
@@ -414,15 +416,72 @@ section{padding:76px 0}
   .close .wrap{grid-template-columns:1fr;gap:42px}
 }
 @media (max-width:720px){
-  .wrap,.narrow{padding:0 22px}
-  .shelf{padding-left:22px;padding-right:22px}
-  .holdings{grid-template-columns:repeat(2,1fr);gap:30px 20px}
-  .venue{grid-template-columns:1fr;gap:14px}
+  html{scroll-padding-top:96px}
+  .wrap,.narrow{padding:0 20px}
+  .shelf{padding-left:20px;padding-right:20px}
+  section{padding:46px 0}
+  .opening{padding:34px 0 34px}
+
+  /* the letterhead repeats the colophon and cost four wrapped lines */
+  .letterhead{display:none}
+
+  /* a compact sticky bar: identity on one row, sections scrolling on the next */
+  .masthead .wrap{
+    flex-direction:column;align-items:stretch;min-width:0;
+    gap:0;padding-top:11px;padding-bottom:0;
+  }
+  .wordmark{gap:10px;padding-bottom:10px}
+  .wordmark .glyph{width:26px;height:36px;font-size:10px}
+  .wordmark .n{font-size:16px}
+  .wordmark .s{font-size:8px;letter-spacing:.15em;margin-top:2px}
+  .masthead nav{
+    flex-wrap:nowrap;overflow-x:auto;gap:0;
+    min-width:0;max-width:100%;
+    margin:0 -20px;padding:0 20px;
+    border-top:1px solid var(--line);
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .masthead nav::-webkit-scrollbar{display:none}
+  .masthead nav a{
+    white-space:nowrap;flex:none;
+    padding:12px 0 11px;margin-right:20px;
+    border-bottom:2px solid transparent;
+  }
+  .masthead nav a:last-child{margin-right:20px}
+
+  /* label-over-value beats a two-column grid at this width */
+  .spec .row{grid-template-columns:1fr;gap:3px;padding:12px 0}
+  .spec dd{font-size:15px}
+
+  .entry{grid-template-columns:1fr;gap:5px;padding:16px 0}
+  .entry .v{font-size:30px;text-align:left}
+  .entry .v .note{text-align:left;margin-top:5px;font-size:13.5px}
+
+  .opening h1{font-size:35px}
+  .opening .lede{font-size:17px;margin-top:18px}
+  .sechead{gap:12px;padding-bottom:28px}
+  .sechead p{font-size:15.5px}
+  .venue{grid-template-columns:1fr;gap:12px;padding:24px 0}
   .venue .role{grid-column:1}
-  .movement{grid-template-columns:1fr;gap:28px}
-  section{padding:54px 0}
-  .opening{padding:48px 0 40px}
-  .entry .v{font-size:22px}
+  .venue .name{font-size:26px}
+  .venue .body p{font-size:15.5px}
+  .movement{grid-template-columns:1fr;gap:26px}
+  .holdings{grid-template-columns:repeat(2,1fr);gap:24px 14px}
+  .holding .plate{padding:9px}
+  .holding .t{font-size:13.5px}
+  .holding .s{font-size:12.5px}
+  .close p{font-size:16.5px}
+  .desk .val{font-size:15px}
+}
+
+@media (max-width:430px){
+  .opening h1{font-size:32px}
+  .specimen{flex:0 0 168px}
+  .shelf{gap:22px}
+  /* category and grade will not sit side by side in a half-width tile */
+  .holding .m{flex-direction:column;align-items:flex-start;gap:3px}
+  .entry .v{font-size:27px}
+  .venue .name{font-size:24px}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
