@@ -1,7 +1,7 @@
 # EEC Vault
 
 Static one-page site for EEC Vault (Eggeggchicken Vault), a sports card
-dealership based in Orange, California.
+dealership based in Los Angeles, California.
 
 Live at https://juelich23.github.io/eec-vault/
 
