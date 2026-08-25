@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EEC Vault &mdash; Sports Card Dealer, Orange California</title>
+<meta name="description" content="EEC Vault (Eggeggchicken Vault) buys, sells and trades graded sports cards from Orange, California, selling through Alt, Goldin, Fanatics Collect, eBay, card shows and Instagram.">
+<meta name="theme-color" content="#0B0D10">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://REPLACE-WITH-YOUR-DOMAIN/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="EEC Vault &mdash; Sports Card Dealer">
+<meta property="og:description" content="EEC Vault (Eggeggchicken Vault) buys, sells and trades graded sports cards from Orange, California, selling through Alt, Goldin, Fanatics Collect, eBay, card shows and Instagram.">
+<meta property="og:image" content="https://REPLACE-WITH-YOUR-DOMAIN/assets/messi-gold.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Martian+Mono:wght@300;400;500&display=swap">
+<style>
+:root{
+  /* paper &mdash; the document */
+  --paper:#EFEDE8;
+  --paper-2:#E5E2DB;
+  --card:#FAF9F6;
+  --ink:#15181B;
+  --ink-2:#4B5158;
+  --ink-3:#7B818A;
+  --line:#D5D0C7;
+  --line-2:#BFB9AD;
+  --accent:#1C5A4E;
+  --accent-2:#2E7A6A;
+  --flag:#8E3B2F;
+
+  /* case &mdash; a material, not a theme. identical in light and dark. */
+  --case:#0B0D10;
+  --case-2:#13161A;
+  --case-line:#252A30;
+  --case-ink:#E8E5DE;
+  --case-ink-2:#979DA5;
+  --case-light:#D9A441;
+
+  --display:"Familjen Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --text:"Newsreader",Georgia,"Times New Roman",serif;
+  --data:"Martian Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#16191D;
+    --paper-2:#1D2126;
+    --card:#1E2228;
+    --ink:#EAE7E1;
+    --ink-2:#AEB4BC;
+    --ink-3:#848A93;
+    --line:#2C3138;
+    --line-2:#3B424A;
+    --accent:#5FBFA8;
+    --accent-2:#7FD3BE;
+    --flag:#DE8878;
+    --case:#08090C;
+    --case-2:#0E1114;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#16191D;
+  --paper-2:#1D2126;
+  --card:#1E2228;
+  --ink:#EAE7E1;
+  --ink-2:#AEB4BC;
+  --ink-3:#848A93;
+  --line:#2C3138;
+  --line-2:#3B424A;
+  --accent:#5FBFA8;
+  --accent-2:#7FD3BE;
+  --flag:#DE8878;
+  --case:#08090C;
+  --case-2:#0E1114;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--text);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  font-optical-sizing:auto;
+}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:1px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 34px}
+.narrow{max-width:1200px;margin:0 auto;padding:0 34px}
+
+/* a small, precise label voice used throughout */
+.lab{
+  font-family:var(--data);
+  font-size:9.5px;
+  font-weight:400;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin:0;
+}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;letter-spacing:-.02em;margin:0;text-wrap:balance}
+
+/* ================= letterhead ================= */
+.letterhead{background:var(--case);color:var(--case-ink-2)}
+.letterhead .wrap{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:20px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px;
+  font-family:var(--data);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;
+}
+.letterhead a{color:var(--case-ink);text-decoration:none}
+.letterhead a:hover{color:var(--case-light)}
+.letterhead .sep{color:var(--case-line);margin:0 10px}
+
+/* ================= masthead ================= */
+.masthead{
+  background:var(--paper);border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:30;
+}
+.masthead .wrap{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:24px;flex-wrap:wrap;padding-top:17px;padding-bottom:17px;
+}
+.wordmark{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--ink)}
+.wordmark .glyph{
+  width:31px;height:43px;flex:none;border:1px solid var(--line-2);
+  background:var(--card);border-radius:2px;
+  display:grid;place-items:center;
+  font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.01em;
+  color:var(--accent);
+  box-shadow:0 1px 2px rgba(0,0,0,.06);
+}
+.wordmark .n{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.025em;line-height:1.1}
+.wordmark .s{display:block;font-family:var(--data);font-size:8.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-3);margin-top:3px}
+.masthead nav{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.masthead nav a{
+  font-family:var(--data);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink-2);text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;
+}
+.masthead nav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+
+/* ================= opening ================= */
+.opening{padding:74px 0 60px}
+.opening .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:70px;align-items:start}
+.opening h1{
+  font-size:clamp(38px,4.7vw,60px);
+  line-height:1.03;
+  margin:18px 0 0;
+  font-weight:600;
+}
+.opening h1 .em{color:var(--accent);font-style:normal}
+.opening .lede{
+  font-size:19px;line-height:1.62;color:var(--ink-2);
+  margin:22px 0 0;max-width:56ch;
+}
+.opening .lede strong{color:var(--ink);font-weight:500}
+
+/* spec block &mdash; reads like a filing header */
+.spec{border-top:1px solid var(--line-2);padding-top:2px}
+.spec dl{margin:0}
+.spec .row{
+  display:grid;grid-template-columns:1fr 1.15fr;gap:18px;
+  padding:11px 0;border-bottom:1px solid var(--line);align-items:baseline;
+}
+.spec dt{
+  font-family:var(--data);font-size:9px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink-3);
+}
+.spec dd{margin:0;font-family:var(--display);font-weight:500;font-size:14.5px;letter-spacing:-.01em;line-height:1.45}
+.spec dd a{text-decoration:none;border-bottom:1px solid var(--line-2)}
+
+/* ================= the case ================= */
+.case{
+  background:var(--case);
+  color:var(--case-ink);
+  position:relative;
+  overflow:hidden;
+  border-top:1px solid var(--case-line);
+  border-bottom:1px solid var(--case-line);
+}
+/* warm light pooling from above &mdash; this is the accent, and it is motivated */
+.case::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(105% 78% at 50% -14%, rgba(217,164,65,.20) 0%, rgba(217,164,65,.05) 38%, transparent 66%),
+    radial-gradient(70% 50% at 50% 116%, rgba(0,0,0,.6) 0%, transparent 70%);
+}
+.case-inner{position:relative;padding:52px 0 46px}
+.case-head{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:26px;
+  flex-wrap:wrap;padding-bottom:34px;
+}
+.case-head .lab{color:var(--case-ink-2)}
+.case-head h2{font-size:clamp(24px,2.7vw,32px);color:var(--case-ink);margin-top:8px;font-weight:600}
+.case-head p{margin:0;font-size:15px;color:var(--case-ink-2);max-width:42ch}
+
+.shelf{
+  display:flex;gap:30px;overflow-x:auto;
+  padding:8px 0 4px;
+  padding-left:max(34px,calc((100% - 1200px) / 2 + 34px));
+  padding-right:max(34px,calc((100% - 1200px) / 2 + 34px));
+  scrollbar-width:thin;
+}
+.shelf::-webkit-scrollbar{height:6px}
+.shelf::-webkit-scrollbar-thumb{background:var(--case-line);border-radius:3px}
+.specimen{flex:0 0 190px}
+
+.slabwrap{
+  position:relative;
+  transition:transform .5s cubic-bezier(.2,.75,.25,1);
+  will-change:transform;
+}
+.specimen:hover .slabwrap,.specimen:focus-within .slabwrap{transform:translateY(-9px)}
+.slabwrap img{
+  width:100%;aspect-ratio:5/7;object-fit:cover;
+  border-radius:3px;
+  box-shadow:
+    0 24px 34px -16px rgba(0,0,0,.9),
+    0 4px 10px rgba(0,0,0,.55),
+    0 0 0 1px rgba(255,255,255,.07);
+  transition:box-shadow .5s cubic-bezier(.2,.75,.25,1);
+}
+.specimen:hover .slabwrap img{
+  box-shadow:
+    0 40px 46px -18px rgba(0,0,0,.95),
+    0 6px 14px rgba(0,0,0,.6),
+    0 0 0 1px rgba(217,164,65,.3);
+}
+/* acrylic sheen across the slab */
+.slabwrap::after{
+  content:"";position:absolute;inset:0;border-radius:3px;pointer-events:none;
+  background:linear-gradient(116deg,
+    rgba(255,255,255,.22) 0%,
+    rgba(255,255,255,.07) 17%,
+    rgba(255,255,255,0) 38%,
+    rgba(255,255,255,0) 76%,
+    rgba(255,255,255,.05) 100%);
+}
+/* the card standing on glass */
+.reflect{
+  height:34px;margin-top:3px;border-radius:0 0 3px 3px;
+  background-image:var(--shot);
+  background-size:cover;
+  background-position:bottom center;
+  transform:scaleY(-1);
+  opacity:.13;
+  filter:blur(1.6px);
+  -webkit-mask-image:linear-gradient(to top,transparent 18%,rgba(0,0,0,.7) 100%);
+  mask-image:linear-gradient(to top,transparent 18%,rgba(0,0,0,.7) 100%);
+  pointer-events:none;
+}
+
+/* wall label */
+.walllabel{
+  margin-top:14px;padding-top:11px;
+  border-top:1px solid var(--case-line);
+}
+.walllabel .t{
+  font-family:var(--display);font-weight:600;font-size:14px;
+  letter-spacing:-.012em;line-height:1.28;color:var(--case-ink);
+}
+.walllabel .s{
+  font-size:13px;font-style:italic;color:var(--case-ink-2);
+  line-height:1.4;margin-top:3px;
+}
+.walllabel .g{
+  display:inline-block;margin-top:8px;
+  font-family:var(--data);font-size:9px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--case-light);
+}
+
+/* ================= document sections ================= */
+section{padding:76px 0}
+.sechead{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:60px;align-items:end;padding-bottom:38px;
+}
+.sechead h2{font-size:clamp(27px,3.2vw,38px);line-height:1.06;margin-top:9px}
+.sechead p{margin:0;color:var(--ink-2);font-size:16.5px;max-width:50ch}
+
+/* ---- venues: editorial rows, not a box grid ---- */
+.venues{border-top:1px solid var(--line-2)}
+.venue{
+  display:grid;grid-template-columns:230px minmax(0,1fr) 200px;
+  gap:46px;align-items:start;
+  padding:30px 0;border-bottom:1px solid var(--line);
+  transition:background-color .3s ease;
+}
+.venue:hover{background:var(--paper-2)}
+.venue .name{font-family:var(--display);font-weight:600;font-size:29px;letter-spacing:-.028em;line-height:1.05}
+.venue .kind{
+  display:block;font-family:var(--data);font-size:9px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink-3);margin-top:9px;
+}
+.venue .body p{margin:0;font-size:16.5px;line-height:1.58;color:var(--ink-2)}
+.venue .body .host{
+  display:inline-block;margin-top:9px;font-family:var(--data);font-size:9.5px;
+  letter-spacing:.1em;color:var(--ink-3);
+}
+.venue .role{
+  font-family:var(--display);font-weight:500;font-size:14.5px;letter-spacing:-.01em;
+  color:var(--ink);padding-top:4px;
+}
+.venue .role .cap{
+  display:block;font-family:var(--data);font-size:9px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;font-weight:400;
+}
+
+/* ---- movement: an honest sequence on a rule ---- */
+.movement{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:38px;padding-top:26px}
+.movement::before{
+  content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--line-2);
+}
+.stage{position:relative;padding-top:24px}
+.stage::before{
+  content:"";position:absolute;left:0;top:-3px;width:5px;height:5px;
+  border-radius:50%;background:var(--accent);
+}
+.stage .of{
+  font-family:var(--data);font-size:9px;letter-spacing:.15em;
+  color:var(--accent);text-transform:uppercase;
+}
+.stage h4{font-size:19px;margin:9px 0 8px;font-weight:600;letter-spacing:-.02em}
+.stage p{margin:0;font-size:15.5px;line-height:1.55;color:var(--ink-2)}
+
+/* ---- inventory: catalogued, wall-labelled ---- */
+.holdings{display:grid;grid-template-columns:repeat(4,1fr);gap:38px 30px}
+.holding{margin:0}
+.holding .plate{
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:13px;
+  transition:border-color .35s ease,box-shadow .35s ease;
+}
+.holding:hover .plate{border-color:var(--line-2);box-shadow:0 10px 24px -14px rgba(0,0,0,.4)}
+.holding img{
+  width:100%;aspect-ratio:5/7;object-fit:cover;border-radius:2px;
+  box-shadow:0 2px 8px rgba(0,0,0,.16);
+}
+.holding figcaption{padding-top:13px}
+.holding .t{
+  font-family:var(--display);font-weight:600;font-size:15px;
+  letter-spacing:-.015em;line-height:1.28;
+}
+.holding .s{font-size:14px;font-style:italic;color:var(--ink-2);line-height:1.4;margin-top:3px}
+.holding .m{
+  display:flex;justify-content:space-between;gap:12px;align-items:baseline;
+  margin-top:9px;padding-top:8px;border-top:1px solid var(--line);
+  font-family:var(--data);font-size:9px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.holding .m .grade{color:var(--accent)}
+
+/* ---- record: dark band, figures ---- */
+.record{background:var(--case);color:var(--case-ink);position:relative;overflow:hidden}
+.record::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(88% 70% at 78% -10%, rgba(217,164,65,.11) 0%, transparent 62%);
+}
+.record .wrap{position:relative}
+.record .sechead .lab{color:var(--case-ink-2)}
+.record .sechead h2{color:var(--case-ink)}
+.record .sechead p{color:var(--case-ink-2)}
+.ledger{border-top:1px solid var(--case-line)}
+.entry{
+  display:grid;grid-template-columns:1fr auto;gap:30px;align-items:baseline;
+  padding:19px 0;border-bottom:1px solid var(--case-line);
+}
+.entry .k{
+  font-family:var(--data);font-size:10px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--case-ink-2);
+}
+.entry .v{
+  font-family:var(--display);font-weight:600;font-size:27px;letter-spacing:-.028em;
+  line-height:1;font-variant-numeric:tabular-nums;color:var(--case-ink);
+}
+.entry .v .note{
+  display:block;font-family:var(--text);font-weight:400;font-size:13px;font-style:italic;
+  letter-spacing:0;color:var(--case-ink-2);margin-top:7px;text-align:right;
+}
+.pending{
+  display:inline-block;font-family:var(--data);font-size:10px;font-weight:400;
+  letter-spacing:.13em;text-transform:uppercase;
+  color:var(--case-light);border:1px solid rgba(217,164,65,.42);
+  border-radius:2px;padding:7px 11px;line-height:1;
+}
+.record .caveat{
+  margin:30px 0 0;padding-left:16px;border-left:2px solid var(--case-light);
+  font-size:15.5px;line-height:1.6;color:var(--case-ink-2);max-width:66ch;
+}
+.record .caveat em{color:var(--case-ink);font-style:italic}
+
+/* ---- close ---- */
+.close .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:70px;align-items:start}
+.close h2{font-size:clamp(30px,3.7vw,44px);line-height:1.05;margin-top:16px}
+.close p{color:var(--ink-2);max-width:48ch;font-size:17.5px;margin:20px 0 0}
+.desk{border-top:1px solid var(--line-2)}
+.desk .line{
+  display:grid;grid-template-columns:1fr auto;gap:20px;align-items:baseline;
+  padding:15px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;
+}
+.desk a.line:hover .val{color:var(--accent)}
+.desk .key{font-family:var(--data);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3)}
+.desk .val{font-family:var(--display);font-weight:500;font-size:16px;letter-spacing:-.015em;text-align:right}
+.desk .val.blank{
+  font-family:var(--data);font-weight:400;font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--flag);border:1px solid var(--flag);border-radius:2px;padding:6px 10px;line-height:1;
+  display:inline-block;
+}
+
+/* ---- colophon ---- */
+.colophon{background:var(--case);color:var(--case-ink-2);padding:30px 0 40px}
+.colophon .wrap{
+  display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;align-items:baseline;
+  font-family:var(--data);font-size:9px;letter-spacing:.15em;text-transform:uppercase;
+}
+.colophon a{color:var(--case-ink);text-decoration:none}
+.colophon a:hover{color:var(--case-light)}
+
+/* ================= responsive ================= */
+@media (max-width:1080px){
+  .opening .wrap{grid-template-columns:1fr;gap:46px}
+  .holdings{grid-template-columns:repeat(3,1fr)}
+  .venue{grid-template-columns:190px minmax(0,1fr);gap:34px}
+  .venue .role{grid-column:2;padding-top:14px;border-top:1px solid var(--line)}
+  .movement{grid-template-columns:repeat(2,1fr);gap:34px 38px}
+  .sechead{grid-template-columns:1fr;gap:16px}
+  .close .wrap{grid-template-columns:1fr;gap:42px}
+}
+@media (max-width:720px){
+  .wrap,.narrow{padding:0 22px}
+  .shelf{padding-left:22px;padding-right:22px}
+  .holdings{grid-template-columns:repeat(2,1fr);gap:30px 20px}
+  .venue{grid-template-columns:1fr;gap:14px}
+  .venue .role{grid-column:1}
+  .movement{grid-template-columns:1fr;gap:28px}
+  section{padding:54px 0}
+  .opening{padding:48px 0 40px}
+  .entry .v{font-size:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="letterhead">
+  <div class="wrap">
+    <span>EEC&nbsp;Vault &nbsp;&middot;&nbsp; Eggeggchicken Vault &nbsp;&middot;&nbsp; Orange, California</span>
+    <span>Buying &nbsp;&middot;&nbsp; Selling &nbsp;&middot;&nbsp; Trading &nbsp;&middot;&nbsp; All sport<span class="sep">|</span><a href="https://www.instagram.com/yishui523/">@yishui523</a></span>
+  </div>
+</div>
+
+<div class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="#top">
+      <span class="glyph">EEC</span>
+      <span>
+        <span class="n">EEC Vault</span>
+        <span class="s">Sports card dealer</span>
+      </span>
+    </a>
+    <nav>
+      <a href="#case">The case</a>
+      <a href="#venues">Where we sell</a>
+      <a href="#movement">Operations</a>
+      <a href="#holdings">Inventory</a>
+      <a href="#record">The record</a>
+      <a href="#desk">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<div class="opening" id="top">
+  <div class="wrap">
+    <div>
+      <p class="lab">Graded sports cards &nbsp;&middot;&nbsp; Orange, California</p>
+      <h1>Every card has a room where it sells for the most. <span class="em">Knowing which one is the business.</span></h1>
+      <p class="lede">EEC Vault buys graded and raw sports cards outright, submits raw material to <strong>PSA</strong> and <strong>Beckett</strong> for authentication, and places finished inventory through the four venues that set the market &mdash; <strong>Alt</strong>, <strong>Goldin</strong>, <strong>Fanatics Collect</strong> and <strong>eBay</strong> &mdash; alongside direct sales at <strong>card shows</strong> and through <strong>Instagram</strong>.</p>
+    </div>
+
+    <div class="spec">
+      <dl>
+        <div class="row"><dt>Principal</dt><dd>Meilu Huang</dd></div>
+        <div class="row"><dt>Trading as</dt><dd>EEC Vault &middot; Eggeggchicken Vault</dd></div>
+        <div class="row"><dt>Base</dt><dd>Orange, California</dd></div>
+        <div class="row"><dt>Activity</dt><dd>Buy &middot; Sell &middot; Trade</dd></div>
+        <div class="row"><dt>Categories</dt><dd>Basketball &middot; Soccer &middot; Football &middot; Formula&nbsp;1 &middot; Licensed non-sport</dd></div>
+        <div class="row"><dt>Authentication</dt><dd>PSA &middot; Beckett (BGS)</dd></div>
+        <div class="row"><dt>Sales channels</dt><dd>Alt &middot; Goldin &middot; Fanatics Collect &middot; eBay &middot; Card shows &middot; Instagram</dd></div>
+        <div class="row"><dt>Public record</dt><dd><a href="https://www.instagram.com/yishui523/">@yishui523</a> &mdash; 2,070 followers</dd></div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<div class="case" id="case">
+  <div class="case-inner">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <p class="lab">Currently in the case</p>
+          <h2>Seven that came through the vault</h2>
+        </div>
+        <p>Cards handled by the business, documented publicly as they moved. Drag to see the rest of the row.</p>
+      </div>
+    </div>
+    <div class="shelf">
+        <div class="specimen">
+          <div class="slabwrap"><img src="assets/messi-gold.jpg" loading="lazy" decoding="async" alt="Lionel Messi &mdash; Gold Prizm, 2026 Prizm World Cup"></div>
+          <div class="reflect" style="--shot:url('assets/messi-gold.jpg')"></div>
+          <div class="walllabel">
+            <div class="t">Lionel Messi</div>
+            <div class="s">Gold Prizm, 2026 Prizm World Cup</div>
+            <span class="g">PSA 10 Gem Mint</span>
+          </div>
+        </div>
+        <div class="specimen">
+          <div class="slabwrap"><img src="assets/bird.jpg" loading="lazy" decoding="async" alt="Larry Bird &mdash; Patch autograph, Panini Flawless"></div>
+          <div class="reflect" style="--shot:url('assets/bird.jpg')"></div>
+          <div class="walllabel">
+            <div class="t">Larry Bird</div>
+            <div class="s">Patch autograph, Panini Flawless</div>
+            <span class="g">Numbered 10/25</span>
+          </div>
+        </div>
+        <div class="specimen">
+          <div class="slabwrap"><img src="assets/zhou.jpg" loading="lazy" decoding="async" alt="Zhou Guanyu &mdash; Patch autographs, Topps Dynasty F1"></div>
+          <div class="reflect" style="--shot:url('assets/zhou.jpg')"></div>
+          <div class="walllabel">
+            <div class="t">Zhou Guanyu</div>
+            <div class="s">Patch autographs, Topps Dynasty F1</div>
+            <span class="g">Includes a 1-of-1</span>
+          </div>
+        </div>
+        <div class="specimen">
+          <div class="slabwrap"><img src="assets/lebron.jpg" loading="lazy" decoding="async" alt="LeBron James &mdash; Mastercraft, Panini Flawless"></div>
+          <div class="reflect" style="--shot:url('assets/lebron.jpg')"></div>
+          <div class="walllabel">
+            <div class="t">LeBron James</div>
+            <div class="s">Mastercraft, Panini Flawless</div>
+            <span class="g">Dual patch</span>
+          </div>
+        </div>
+        <div class="specimen">
+          <div class="slabwrap"><img src="assets/morant.jpg" loading="lazy" decoding="async" alt="Ja Morant &mdash; 10th Anniversary, Panini Flawless"></div>
+          <div class="reflect" style="--shot:url('assets/morant.jpg')"></div>
+          <div class="walllabel">
+            <div class="t">Ja Morant</div>
+            <div class="s">10th Anniversary, Panini Flawless</div>
+            <span class="g">Grizzlies</span>
+          </div>
+        </div>
+        <div class="specimen">
+          <div class="slabwrap"><img src="assets/vince.jpg" loading="lazy" decoding="async" alt="Vince Carter &mdash; Silhouettes, Crown Royale"></div>
+          <div class="reflect" style="--shot:url('assets/vince.jpg')"></div>
+          <div class="walllabel">
+            <div class="t">Vince Carter</div>
+            <div class="s">Silhouettes, Crown Royale</div>
+            <span class="g">Numbered 09/10</span>
+          </div>
+        </div>
+        <div class="specimen">
+          <div class="slabwrap"><img src="assets/spiderman.jpg" loading="lazy" decoding="async" alt="Spider-Man &mdash; Precious Metal Gems, Skybox Metal"></div>
+          <div class="reflect" style="--shot:url('assets/spiderman.jpg')"></div>
+          <div class="walllabel">
+            <div class="t">Spider-Man</div>
+            <div class="s">Precious Metal Gems, Skybox Metal</div>
+            <span class="g">Licensed non-sport</span>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<section id="venues">
+  <div class="wrap">
+    <div class="sechead">
+      <div>
+        <p class="lab">Where the inventory sells</p>
+        <h2>Six channels, six different jobs</h2>
+      </div>
+      <p>Rarity goes to auction, where competitive bidding finds the ceiling. Liquid, repeat-traded cards go to marketplaces, where the turn is faster and the comps are public. And some inventory never reaches a platform at all &mdash; it sells across a table at a show, or by direct message. Nothing is listed in one place by default.</p>
+    </div>
+
+    <div class="venues">
+      <div class="venue">
+        <div>
+          <span class="name">Alt</span>
+          <span class="kind">Marketplace</span>
+        </div>
+        <div class="body">
+          <p>Collector-native platform for graded cards, pairing auctions with instant offers priced against its own market index. Settlement is quick and the buyer base is specialist rather than general.</p>
+          <span class="host">alt.xyz</span>
+        </div>
+        <div class="role"><span class="cap">Role here</span>Clean turns on mid- to high-grade inventory</div>
+      </div>
+
+      <div class="venue">
+        <div>
+          <span class="name">Goldin</span>
+          <span class="kind">Auction house</span>
+        </div>
+        <div class="body">
+          <p>Established auction house for high-end cards and sports memorabilia, running weekly sales alongside marquee catalog events. This is where a genuinely rare card gets the room it needs.</p>
+          <span class="host">goldin.co</span>
+        </div>
+        <div class="role"><span class="cap">Role here</span>One-of-ones and low-numbered patch autographs</div>
+      </div>
+
+      <div class="venue">
+        <div>
+          <span class="name">Fanatics Collect</span>
+          <span class="kind">Auction &amp; marketplace</span>
+        </div>
+        <div class="body">
+          <p>Fanatics' auction and fixed-price marketplace, with vault storage and direct access to the largest collector audience in the sport. Handles depth across categories in a single consignment.</p>
+          <span class="host">fanaticscollect.com</span>
+        </div>
+        <div class="role"><span class="cap">Role here</span>Volume consignment across categories</div>
+      </div>
+
+      <div class="venue">
+        <div>
+          <span class="name">eBay</span>
+          <span class="kind">Marketplace</span>
+        </div>
+        <div class="body">
+          <p>The largest open market for trading cards and the deepest source of public comparable sales anywhere in the hobby &mdash; which makes it both a sales channel and the pricing reference for everything else.</p>
+          <span class="host">ebay.com</span>
+        </div>
+        <div class="role"><span class="cap">Role here</span>Steady direct sales and price discovery</div>
+      </div>
+
+      <div class="venue">
+        <div>
+          <span class="name">Card shows</span>
+          <span class="kind">In person</span>
+        </div>
+        <div class="body">
+          <p>National and regional conventions, including the National Sports Collectors Convention. Cards change hands across the table for cash or trade, with no platform fee and settlement on the spot.</p>
+          <span class="host">Nationwide, in person</span>
+        </div>
+        <div class="role"><span class="cap">Role here</span>Direct sales and trade at the table</div>
+      </div>
+
+      <div class="venue">
+        <div>
+          <span class="name">Instagram</span>
+          <span class="kind">Direct</span>
+        </div>
+        <div class="body">
+          <p>Inventory is posted publicly as it moves, and sales and trades are closed by direct message with a following of 2,070 collectors who already know the book.</p>
+          <span class="host">instagram.com/yishui523</span>
+        </div>
+        <div class="role"><span class="cap">Role here</span>Direct sales to a known audience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="movement">
+  <div class="wrap">
+    <div class="sechead">
+      <div>
+        <p class="lab">Operations</p>
+        <h2>How a card moves through the business</h2>
+      </div>
+      <p>The same four stages every time, from the show floor to settled proceeds. Capital turns over rather than sitting in inventory.</p>
+    </div>
+    <div class="movement">
+      <div class="stage">
+        <span class="of">Stage 1 of 4</span>
+        <h4>Acquire</h4>
+        <p>Private purchases, collector trades, and floor buying at national and regional shows including the National Sports Collectors Convention.</p>
+      </div>
+      <div class="stage">
+        <span class="of">Stage 2 of 4</span>
+        <h4>Authenticate</h4>
+        <p>Raw cards are submitted to PSA or Beckett to be graded and encapsulated. The grade is what establishes resale value and makes the card tradeable sight-unseen.</p>
+      </div>
+      <div class="stage">
+        <span class="of">Stage 3 of 4</span>
+        <h4>Place</h4>
+        <p>Each card is assigned to the venue built for it &mdash; auction where rarity needs bidders, marketplace where liquidity matters more than ceiling.</p>
+      </div>
+      <div class="stage">
+        <span class="of">Stage 4 of 4</span>
+        <h4>Settle</h4>
+        <p>The platform remits proceeds after the sale clears, and capital is recycled directly into the next acquisition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="holdings">
+  <div class="wrap">
+    <div class="sechead">
+      <div>
+        <p class="lab">Representative inventory</p>
+        <h2>Twelve from the book</h2>
+      </div>
+      <p>A cross-section of what the business handles, drawn from its public record. Graded pieces list their grade; serial-numbered pieces list the print run.</p>
+    </div>
+    <div class="holdings">
+        <figure class="holding">
+          <div class="plate"><img src="assets/ronaldo-messi.jpg" loading="lazy" decoding="async" alt="Ronaldo / Messi &mdash; Matchups Blue Prizm, 2014 Prizm World Cup"></div>
+          <figcaption>
+            <div class="t">Ronaldo / Messi</div>
+            <div class="s">Matchups Blue Prizm, 2014 Prizm World Cup</div>
+            <div class="m"><span>Soccer</span><span class="grade">PSA 9</span></div>
+          </figcaption>
+        </figure>
+        <figure class="holding">
+          <div class="plate"><img src="assets/wemby.jpg" loading="lazy" decoding="async" alt="Victor Wembanyama &mdash; Autograph redemptions, 2023 Bowman University"></div>
+          <figcaption>
+            <div class="t">Victor Wembanyama</div>
+            <div class="s">Autograph redemptions, 2023 Bowman University</div>
+            <div class="m"><span>Basketball</span><span class="grade">Redemption</span></div>
+          </figcaption>
+        </figure>
+        <figure class="holding">
+          <div class="plate"><img src="assets/cade.jpg" loading="lazy" decoding="async" alt="Cade Cunningham &mdash; Rookie parallel, Panini Prizm"></div>
+          <figcaption>
+            <div class="t">Cade Cunningham</div>
+            <div class="s">Rookie parallel, Panini Prizm</div>
+            <div class="m"><span>Basketball</span><span class="grade">Raw</span></div>
+          </figcaption>
+        </figure>
+        <figure class="holding">
+          <div class="plate"><img src="assets/zion.jpg" loading="lazy" decoding="async" alt="Zion Williamson &mdash; Rookie, Panini Mosaic"></div>
+          <figcaption>
+            <div class="t">Zion Williamson</div>
+            <div class="s">Rookie, Panini Mosaic</div>
+            <div class="m"><span>Basketball</span><span class="grade">BGS 9.5</span></div>
+          </figcaption>
+        </figure>
+        <figure class="holding">
+          <div class="plate"><img src="assets/immaculate.jpg" loading="lazy" decoding="async" alt="Autograph group &mdash; Doncic · Bryant · Wilkins, Panini Immaculate"></div>
+          <figcaption>
+            <div class="t">Autograph group</div>
+            <div class="s">Doncic · Bryant · Wilkins, Panini Immaculate</div>
+            <div class="m"><span>Basketball</span><span class="grade">Numbered</span></div>
+          </figcaption>
+        </figure>
+        <figure class="holding">
+          <div class="plate"><img src="assets/diallo.jpg" loading="lazy" decoding="async" alt="Hamidou Diallo &mdash; Prizm Gold, Panini Prizm"></div>
+          <figcaption>
+            <div class="t">Hamidou Diallo</div>
+            <div class="s">Prizm Gold, Panini Prizm</div>
+            <div class="m"><span>Basketball</span><span class="grade">BGS 9.5</span></div>
+          </figcaption>
+        </figure>
+        <figure class="holding">
+          <div class="plate"><img src="assets/disney.jpg" loading="lazy" decoding="async" alt="Mickey · Minnie · Donald &mdash; Triple booklet autograph, Topps Disney"></div>
+          <figcaption>
+            <div class="t">Mickey · Minnie · Donald</div>
+            <div class="s">Triple booklet autograph, Topps Disney</div>
+            <div class="m"><span>Non-sport</span><span class="grade">Booklet</span></div>
+          </figcaption>
+        </figure>
+        <figure class="holding">
+          <div class="plate"><img src="assets/spiderman.jpg" loading="lazy" decoding="async" alt="Spider-Man &mdash; Precious Metal Gems, Skybox Metal"></div>
+          <figcaption>
+            <div class="t">Spider-Man</div>
+            <div class="s">Precious Metal Gems, Skybox Metal</div>
+            <div class="m"><span>Non-sport</span><span class="grade">Raw</span></div>
+          </figcaption>
+        </figure>
+        <figure class="holding">
+          <div class="plate"><img src="assets/messi-gold.jpg" loading="lazy" decoding="async" alt="Lionel Messi &mdash; Gold Prizm, 2026 Prizm World Cup"></div>
+          <figcaption>
+            <div class="t">Lionel Messi</div>
+            <div class="s">Gold Prizm, 2026 Prizm World Cup</div>
+            <div class="m"><span>Soccer</span><span class="grade">PSA 10</span></div>
+          </figcaption>
+        </figure>
+        <figure class="holding">
+          <div class="plate"><img src="assets/zhou.jpg" loading="lazy" decoding="async" alt="Zhou Guanyu &mdash; Patch autographs, Topps Dynasty F1"></div>
+          <figcaption>
+            <div class="t">Zhou Guanyu</div>
+            <div class="s">Patch autographs, Topps Dynasty F1</div>
+            <div class="m"><span>Formula 1</span><span class="grade">1/1</span></div>
+          </figcaption>
+        </figure>
+        <figure class="holding">
+          <div class="plate"><img src="assets/bird.jpg" loading="lazy" decoding="async" alt="Larry Bird &mdash; Patch autograph, Panini Flawless"></div>
+          <figcaption>
+            <div class="t">Larry Bird</div>
+            <div class="s">Patch autograph, Panini Flawless</div>
+            <div class="m"><span>Basketball</span><span class="grade">10/25</span></div>
+          </figcaption>
+        </figure>
+        <figure class="holding">
+          <div class="plate"><img src="assets/national.jpg" loading="lazy" decoding="async" alt="The National &mdash; Show floor trading, Sports Collectors Convention"></div>
+          <figcaption>
+            <div class="t">The National</div>
+            <div class="s">Show floor trading, Sports Collectors Convention</div>
+            <div class="m"><span>Sourcing</span><span class="grade">On site</span></div>
+          </figcaption>
+        </figure>
+    </div>
+  </div>
+</section>
+
+<div class="record" id="record">
+  <section>
+    <div class="wrap">
+      <div class="sechead">
+        <div>
+          <p class="lab">The record</p>
+          <h2>The business in figures</h2>
+        </div>
+        <p>Verified figures are stated. Everything the business has not yet supplied is marked pending rather than estimated.</p>
+      </div>
+      <div class="ledger">
+        <div class="entry"><span class="k">Active selling channels</span><span class="v">6<span class="note">Four platforms, plus card shows and Instagram</span></span></div>
+        <div class="entry"><span class="k">Authentication partners</span><span class="v">2<span class="note">PSA and Beckett</span></span></div>
+        <div class="entry"><span class="k">Instagram following</span><span class="v">2,070<span class="note">@yishui523, August 2026</span></span></div>
+        <div class="entry"><span class="k">Years in operation</span><span class="v"><span class="pending">Pending</span></span></div>
+        <div class="entry"><span class="k">Shows attended per year</span><span class="v"><span class="pending">Pending</span></span></div>
+      </div>
+      <p class="caveat">Every line marked <em>pending</em> is a real blank, not a placeholder for effect. Fill them in from your own records before this goes to the bank &mdash; a lender will treat an unsupported number as the weakest claim on the page, and an honest blank costs you far less than a figure you cannot evidence.</p>
+    </div>
+  </section>
+</div>
+
+<section class="close" id="desk">
+  <div class="wrap">
+    <div>
+      <p class="lab">Always buying &middot; Always selling &middot; Always trading</p>
+      <h2>Bring us the card, or the whole collection.</h2>
+      <p>EEC Vault buys outright, trades against standing inventory, or consigns on your behalf to whichever channel will get the number. Single pieces and full collections both welcome.</p>
+    </div>
+    <div class="desk">
+      <a class="line" href="https://www.instagram.com/yishui523/">
+        <span class="key">Instagram</span><span class="val">@yishui523</span>
+      </a>
+      <div class="line"><span class="key">Enquiries</span><span class="val">By direct message</span></div>
+      <div class="line"><span class="key">Principal</span><span class="val">Meilu Huang</span></div>
+      <div class="line"><span class="key">Based in</span><span class="val">Orange, California</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="colophon">
+  <div class="wrap">
+    <span>EEC Vault &mdash; Eggeggchicken Vault</span>
+    <span>Orange, California</span>
+    <span><a href="https://www.instagram.com/yishui523/">Instagram @yishui523</a></span>
+  </div>
+</div>
+</body>
+</html>
