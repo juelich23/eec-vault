@@ -3,7 +3,7 @@
 Static one-page site for EEC Vault (Eggeggchicken Vault), a sports card
 dealership based in Los Angeles, California.
 
-Live at https://juelich23.github.io/eec-vault/
+Live at https://eecvault.com/
 
 ## Structure
 
@@ -20,13 +20,9 @@ or serve the folder:
 
 Pushing to `main` publishes automatically via GitHub Pages.
 
-## Still to do
-
-- `REPLACE-WITH-YOUR-DOMAIN` appears in the canonical and og:image tags in
-  `index.html`. Replace both once a custom domain is pointed here, otherwise
-  link previews will not render.
-
 ## Custom domain
 
-Add a `CNAME` file containing the bare domain, then point DNS at
-GitHub Pages. Update the two meta tags above at the same time.
+`eecvault.com`, registered at Cloudflare. DNS is four apex A records
+pointing at GitHub Pages plus a `www` CNAME, all set to DNS-only (not
+proxied) so GitHub can issue the TLS certificate. The `CNAME` file in
+this repo is what tells Pages which domain to serve.
